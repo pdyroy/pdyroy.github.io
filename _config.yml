@@ -1,0 +1,69 @@
+# Site settings
+# angepasst für pdyroy.github.io (Minimal Mistakes, GitHub Pages)
+title: pdyroy
+email:
+description: >-
+  Persönliche Seite von pdyroy.
+  Projektnotizen, Posts und mehr.
+github_username: pdyroy
+minimal_mistakes_skin: default
+search: true
+
+# Build settings
+markdown: kramdown
+remote_theme: mmistakes/minimal-mistakes@4.28.1
+repository: pdyroy/pdyroy.github.io
+
+# Outputting
+permalink: /:categories/:title/
+paginate: 5 # amount of posts to show
+paginate_path: /page:num/
+timezone: Europe/Berlin
+
+# Detached pages not a collection
+include:
+  - _pages
+
+# Plugins (previously gems:)
+plugins:
+  - jekyll-paginate
+  - jekyll-sitemap
+  - jekyll-gist
+  - jekyll-feed
+  - jemoji
+  - jekyll-include-cache
+
+author:
+  name   : "pdyroy"
+  location : "Hannover, Germany"
+  avatar : "/assets/images/bio-photo.jpg"
+  bio    : "Platzhalter — Beschreibung folgt."
+  links:
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/pdyroy"
+
+footer:
+  links:
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/pdyroy"
+
+defaults:
+  # _posts
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: single
+      author_profile: true
+      read_time: true
+      share: true
+      related: true
+  # _pages
+  - scope:
+      path: "_pages"
+      type: pages
+    values:
+      layout: single
+      author_profile: true
